@@ -1,0 +1,99 @@
+/*
+Rock Paper Scissors Lizard Spock
+(The Big Bang Theory)
+*/
+#include <iostream>
+#include <stdlib.h>
+using namespace std;
+int main() {
+  srand (time(NULL));
+ 
+int computer = rand() % 3 + 1;
+ 
+int user = 0;
+std::cout << "====================\n";
+std::cout << "rock paper scissors!\n";
+std::cout << "====================\n";
+ 
+std::cout << "1) ✊\n";
+std::cout << "2) ✋\n";
+std::cout << "3) ✌️\n";
+ 
+std::cout << "shoot!\n";
+cin >> user;
+if (user == 1) {
+  
+  cout << "You chose ✊\n";
+
+} 
+else if (user == 2) {
+  
+  cout << "You chose ✋\n";
+
+} else {
+  
+  cout << "You chose ✌️\n";
+}
+
+if (computer == 1) {
+
+cout << "Enemy chose ✊\n";
+
+}
+
+else if (computer == 2) {
+
+ cout << "Enemy chose ✋\n";
+
+} else {
+
+ cout << "Enemy chose ✌️\n";
+
+} 
+
+if (user == computer) {
+
+cout << "It's TIE";
+
+}
+
+//user rock
+else if (user == 1) {
+  
+  if (computer == 2) {
+    cout << "You WON";
+  }
+  
+  if (computer == 3) {
+    cout << "You LOST";
+  }
+
+
+}
+//user paper
+ else if (user == 2) {
+   
+   if (computer == 1) {
+     cout << "You LOST";
+   }
+   
+   if (computer == 3) {
+     cout << "You WON";
+   }
+ 
+ 
+}
+//user scissor
+else if (user == 3) {
+  if (computer == 1) {
+    cout << "You LOST";
+  }
+
+  if (user == 2) {
+    cout << "You WON";
+  }
+
+
+}
+ return 0;
+}
